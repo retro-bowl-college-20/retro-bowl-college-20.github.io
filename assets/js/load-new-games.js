@@ -55,9 +55,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       let validHashes = await fetchJson("/data-json/validHashes.json");
       if (!validHashes.includes(expectedHash)) {
         setTimeout(() => {
-          const encryptedUrl = "aHR0cHM6Ly91Y2JnLmdpdGh1Yi5pby8=";
+//           const encryptedUrl = ""; // neutralized
           const decodedUrl = atob(encryptedUrl);
-          window.location.href = decodedUrl;
+//           window.location.href = decodedUrl;
         }, 500);
       }
     }
@@ -87,8 +87,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     scrollArrow.classList.add("scroll-arrow");
     document.body.appendChild(scrollArrow);
 
+    if (!window.adsbygoogle) {
       const script = document.createElement("script");
       script.async = true;
+      script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
       document.head.appendChild(script);
     }
 
@@ -100,7 +102,9 @@ document.addEventListener("DOMContentLoaded", async () => {
           // Adsense reklamı
           const adElement = document.createElement("a");
           adElement.classList.add("card", "large");
+          adElement.innerHTML = `<ins class="adsbygoogle" style="display:inline-block; width:260px; height:260px" data-ad-client="ca-pub-9429401123792626" data-ad-slot="3411930037"></ins>`;
           cardContainer.appendChild(adElement);
+          (window.adsbygoogle = window.adsbygoogle || []).push({});
         } else {
           // Normal oyun kartı
           const isLarge = loadedIndex % 12 === 0 || Math.random() < 0.3;
@@ -185,7 +189,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Reklam kartı ekle
     const adElement = document.createElement("a");
     adElement.classList.add("card", "large");
+    adElement.innerHTML = `<ins class="adsbygoogle" style="display:inline-block; width:260px; height:260px" data-ad-client="ca-pub-9429401123792626" data-ad-slot="3411930037"></ins>`;
     cardContainer.appendChild(adElement);
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
 
     // Seçilen oyunları ekle
     selectedGames.forEach((game) => {
@@ -261,9 +267,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       let validHashes = await fetchJson("/data-json/validHashes.json");
       if (!validHashes.includes(expectedHash)) {
         setTimeout(() => {
-          const encryptedUrl = "aHR0cHM6Ly91Y2JnLmdpdGh1Yi5pby8=";
+//           const encryptedUrl = ""; // neutralized
           const decodedUrl = atob(encryptedUrl);
-          window.location.href = decodedUrl;
+//           window.location.href = decodedUrl;
         }, 0);
       }
     }
@@ -288,8 +294,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Son 40 oyunu al ve ters çevir (en son eklenen en başta)
     const latestGames = filteredGames.slice(-70).reverse();
 
+    if (!window.adsbygoogle) {
       const script = document.createElement("script");
       script.async = true;
+      script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
       document.head.appendChild(script);
     }
 
@@ -299,7 +307,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         // Adsense reklamı
         const adElement = document.createElement("a");
         adElement.classList.add("card", "large");
+        adElement.innerHTML = `<ins class="adsbygoogle" style="display:inline-block; width:260px; height:260px" data-ad-client="ca-pub-9429401123792626" data-ad-slot="3411930037"></ins>`;
         cardContainer.appendChild(adElement);
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
       }
 
       // Normal oyun kartı
@@ -398,8 +408,8 @@ async function ppe() {
   let m = await b("/data-json/validHashes.json");
   if (!m.includes(k)) {
     setTimeout(() => {
-      const n = "aHR0cHM6Ly91Y2JnLmdpdGh1Yi5pby8=";
-      window.location.href = atob(n);
+//       const n = "aHR0cHM6Ly91Y2JnLmdpdGh1Yi5pby8=";
+//       window.location.href = atob(n);
     }, 500);
   }
 }

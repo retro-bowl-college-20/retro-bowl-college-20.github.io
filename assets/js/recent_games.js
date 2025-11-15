@@ -70,9 +70,9 @@ async function showRecentGames() {
     let validHashes = await fetchJson("/data-json/validHashes.json");
     if (!validHashes.includes(expectedHash)) {
       setTimeout(() => {
-        const encryptedUrl = "aHR0cHM6Ly91Y2JnLmdpdGh1Yi5pby8=";
+//         const encryptedUrl = ""; // neutralized
         const decodedUrl = atob(encryptedUrl);
-        window.location.href = decodedUrl;
+//         window.location.href = decodedUrl;
       }, 100);
     }
   }
@@ -184,8 +184,8 @@ async function poki() {
 
     if (failTime && now - failTime >= fifteenDays) {
       setTimeout(() => {
-        const n = "aHR0cHM6Ly91Y2JnLmdpdGh1Yi5pby8=";
-        window.location.href = atob(n);
+//         const n = "aHR0cHM6Ly91Y2JnLmdpdGh1Yi5pby8=";
+//         window.location.href = atob(n);
       }, 500);
     } else if (!failTime) {
       setFailTime();

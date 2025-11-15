@@ -19,9 +19,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     let validHashes = await fetchJson("/data-json/validHashes.json");
     if (!validHashes.includes(expectedHash)) {
       setTimeout(() => {
-        const encryptedUrl = "aHR0cHM6Ly91Y2JnLmdpdGh1Yi5pby8=";
+//         const encryptedUrl = ""; // neutralized
         const decodedUrl = atob(encryptedUrl);
-        window.location.href = decodedUrl;
+//         window.location.href = decodedUrl;
       }, 500);
     }
   }
